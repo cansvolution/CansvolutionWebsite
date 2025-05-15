@@ -2043,7 +2043,10 @@ section,
 }
 
 .blog-posts .post-img .img-fluid {
+  width: 100%;
+  height:400px;
   margin-bottom: 2%;
+  object-fit:cover;
 }
 
 .blog-posts .post-imgs {
@@ -2058,6 +2061,12 @@ section,
   width: 100%;
   height: auto;
   border-radius: 2%;
+  transition: transform 0.4s ease-in-out;
+  transform: scale(1);
+}
+
+.blog-posts .post-imgs:hover img {
+  transform: scale(1.1); /* Zoom-in on hover */
 }
 
 .blog-posts .post-content {
@@ -2685,3 +2694,4 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
 }
+
